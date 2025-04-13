@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Architect Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
+</head>
+<body class="font-sans bg-gradient-to-br from-blue-100 via-purple-100 to-indigo-100 min-h-screen">
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-indigo-700">Architect</h1>
+      <div class="space-x-4 hidden md:block">
+        <a href="#about" class="text-gray-600 hover:text-indigo-500">About</a>
+        <a href="#projects" class="text-gray-600 hover:text-indigo-500">Projects</a>
+      </div>
+      <button id="navToggle" class="md:hidden text-gray-800 focus:outline-none">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden px-4 pb-4">
+      <a href="#about" class="block text-gray-600 py-2 hover:text-indigo-500">About</a>
+      <a href="#projects" class="block text-gray-600 py-2 hover:text-indigo-500">Projects</a>
+    </div>
+  </nav>
+  <!-- Main Content -->
+  <main class="pt-24">
+    <!-- Section 1: About -->
+    <section id="about" class="max-w-7xl mx-auto px-6 py-20 bg-white bg-opacity-90 shadow-xl rounded-xl mb-10">
+      <h2 class="text-4xl font-extrabold text-indigo-800 mb-6">About Me</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">As a visionary architect, I specialize in creating sustainable, modern spaces that blend aesthetics with functionality. My mission is to design environments that inspire, uplift, and endure. With a decade of experience and a passion for innovation, I collaborate closely with clients to turn their dreams into beautifully structured realities.</p>
+    </section>
+
+    <!-- Section 2: Projects -->
+    <section id="projects" class="max-w-7xl mx-auto px-6 py-20 bg-white bg-opacity-90 shadow-xl rounded-xl">
+      <h2 class="text-4xl font-extrabold text-indigo-800 mb-6">Projects</h2>
+      <p class="text-gray-700 text-lg leading-relaxed">Take a look at my curated portfolio of architectural masterpieces — from serene, eco-friendly residences nestled in nature to bold, innovative commercial spaces that redefine city skylines. Every project is a story of meticulous planning, creative execution, and sustainable design philosophy.</p>
+    </section>
+  </main>
+  <script>
+    const navToggle = document.getElementById('navToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    navToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
